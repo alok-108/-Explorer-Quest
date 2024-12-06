@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorer Quest - 3D Adventure</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="gameArea">
+    <!-- Camera Feed -->
+    <video id="cameraFeed" autoplay></video>
+
+    <!-- Toolbar (Torch Button) -->
+    <div class="toolbar">
+      <button id="torchBtn">Toggle Flashlight</button>
+    </div>
+
+    <!-- Mission Area -->
+    <div id="missionArea">
+      <h2 id="missionName">Mission: Find the Hidden Treasure</h2>
+      <p id="missionClue">Clue: Use your compass and walk north!</p>
+      <button class="actionBtn" onclick="completeMission()">Complete Mission</button>
+    </div>
+    
+    <!-- Compass Info -->
+    <div id="compassArea">
+      <p>Compass Heading: <span id="compassHeading">0</span>°</p>
+    </div>
+
+    <!-- Location-based Clue -->
+    <div id="locationClue"></div>
+
+    <!-- 3D Scene Elements -->
+    <div id="3dCanvas"></div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="hidden">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
